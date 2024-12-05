@@ -1,0 +1,128 @@
+/* Reset de estilos e configurações globais */
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove espaçamentos internos padrão */
+    box-sizing: border-box; /* Inclui bordas e paddings no tamanho total dos elementos */
+    font-family: "Poppins", sans-serif; /* Define a fonte global */
+}
+
+/* Estilo do corpo da página */
+body {
+    background-image: radial-gradient(circle at 50% -11.87%, #35163e 0, #260834 50%, #1a002b 100%); /* Gradiente de fundo */
+    background-size: cover; /* Faz o fundo preencher toda a área */
+    background-repeat: no-repeat; /* Impede que o fundo se repita */
+    background-attachment: fixed; /* Mantém o fundo fixo ao rolar a página */
+    height: 100vh; /* Ocupa toda a altura da janela */
+    display: flex; /* Ativa o flexbox para centralizar elementos */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    color: rgb(199, 194, 186); /* Cor padrão do texto */
+}
+
+/* Estilo do contêiner principal dos cards */
+main.cards {
+    display: flex; /* Organiza os cards em linha */
+    padding: 32px; /* Espaçamento interno no contêiner */
+    flex-direction: row; /* Garante que os itens fiquem lado a lado */
+    justify-content: center; /* Centraliza os cards horizontalmente */
+    align-items: center; /* Centraliza os cards verticalmente */
+    gap: 2rem; /* Espaçamento entre os cards */
+}
+
+/* Estilo individual de cada card */
+main.cards section.card {
+    display: flex; /* Ativa flexbox para organizar os elementos do card */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center; /* Centraliza os elementos no eixo horizontal */
+    text-align: center; /* Centraliza o texto */
+    padding: 1rem 1.5rem; /* Espaçamento interno do card */
+    border-radius: 8px; /* Bordas arredondadas */
+    max-height: 468px; /* Altura máxima do card */
+    margin-left: 32px; /* Espaçamento entre os cards */
+}
+
+/* Remove a margem esquerda do primeiro card */
+main.cards section.card:first-child {
+    margin-left: 0; /* O primeiro card não precisa de espaçamento à esquerda */
+}
+
+/* Define o tamanho dos ícones dentro dos cards */
+main.cards section.card .icon {
+    width: 64px; /* Largura fixa do ícone */
+    height: 64px; /* Altura fixa do ícone */
+}
+
+/* Ajusta o tamanho das imagens nos cards */
+main.cards section.card img {
+    width: 100%; /* Faz a imagem ocupar toda a largura disponível */
+}
+
+/* Estilo do título dentro dos cards */
+main.cards section.card h3 {
+    font-size: 100%; /* Define o tamanho do título */
+    margin: 16px 0; /* Espaçamento acima e abaixo do título */
+}
+
+/* Estilo do texto dentro dos cards */
+main.cards section.card span {
+    font-weight: 300; /* Texto com peso leve */
+    max-width: 240px; /* Largura máxima para o texto */
+    font: 80%; /* Tamanho do texto */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+/* Estilo do botão */
+main.cards section.card button {
+    padding: 0.5rem 1rem; /* Espaçamento interno do botão */
+    text-transform: uppercase; /* Texto em letras maiúsculas */
+    border-radius: 32px; /* Bordas arredondadas */
+    border: 0; /* Remove a borda padrão */
+    cursor: pointer; /* Mostra um ponteiro ao passar sobre o botão */
+    font-size: 80%; /* Define o tamanho do texto do botão */
+    font-weight: 500; /* Define o peso do texto */
+    color: white; /* Cor do texto */
+}
+
+/* Estilo específico para o botão do card "Contact" */
+main.cards section.card.contact button {
+    background: linear-gradient(to right, #9f66ff, #ae99d1); /* Gradiente do botão */
+}
+
+/* Estilo específico para o botão do card "Shop" */
+main.cards section.card.shop button {
+    background: linear-gradient(to right, #3e8aff, #96b3cf); /* Gradiente do botão */
+}
+
+/* Estilo específico para o botão do card "About" */
+main.cards section.card.about button {
+    background: linear-gradient(to right, #fe5f8f, #dba4b5); /* Gradiente do botão */
+}
+
+/* Sombras para os cards */
+main.cards section.card.contact {
+    box-shadow: #00000040 0px 54px 55px, #815fb8 0px -12px 30px, #815fb8 0px 4px 6px, #815fb8 0px 12px 13px, #00000017 0px -3px 5px; 
+}
+
+main.cards section.card.shop {
+    box-shadow: #00000040 0px 54px 55px, #6e68cc 0px -12px 30px, #6e68cc 0px 4px 6px, #6e68cc 0px 12px 13px, #00000017 0px -3px 5px; 
+}
+
+main.cards section.card.about {
+    box-shadow: #00000040 0px 54px 55px, #994392 0px -12px 30px, #994392 0px 4px 6px, #994392 0px 12px 13px, #00000017 0px -3px 5px; 
+}
+
+/* Estilo para telas menores */
+@media screen and (max-width: 720px) {
+    main.cards {
+        flex-direction: column; /* Organiza os cards em coluna */
+    }
+
+    main.cards section.card {
+        margin-left: 0; /* Remove espaçamento lateral */
+        margin-bottom: 32px; /* Adiciona espaçamento inferior */
+    }
+
+    main.cards section.card:last-child {
+        margin-bottom: 0; /* Remove margem do último card */
+    }
+}
