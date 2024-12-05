@@ -17,6 +17,7 @@ Essa imagem mostra o card em uma tela maior, perfeito para visualização em des
 Aqui temos o mesmo card, mas adaptado para telas menores, como smartphones, onde ele se ajusta para uma visualização otimizada.
 
 💡 **Tecnologias Usadas**  
+
 Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 - **HTML5**: Para estruturação e marcação do conteúdo.
